@@ -8,7 +8,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-
+import AlexLeonPackage.MovieClass;
 import guiTeacher.GUIApplication;
 import guiTeacher.components.*;
 import guiTeacher.interfaces.KeyedComponent;
@@ -119,6 +119,8 @@ public class Sampler extends GUIApplication {
 				}
 			}); 
 			viewObjects.add(cb);
+			
+			viewObjects.add(new MovieClass());
 			
 		}
 		
