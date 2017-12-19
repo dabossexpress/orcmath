@@ -44,6 +44,11 @@ public class CatalogueMaker {
 				String d = in.nextLine();
 				int dinteger = Integer.parseInt(d);
 				arrlist.add(new MovieClass(m,p,dinteger));
+				
+				/*movieTitle = new TextField(200,200,200,200,"","Goodfellas")
+				 * viewObjects.add(movieTitle);
+				 * 
+				 * */
 			}
 			else {
 				running = false;
