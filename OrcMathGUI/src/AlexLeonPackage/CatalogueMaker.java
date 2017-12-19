@@ -28,20 +28,26 @@ public class CatalogueMaker {
 	public static void main(String[] args) {
 		CatalogueMaker c = new CatalogueMaker();
 		Scanner in = new Scanner(System.in);
-		System.out.println("Would you like to input movie information? Type 'yes' or 'no' ");
-		String inputInfo = in.nextLine();
-		// ask user input to type number of movie info they'd like to input into the csv
-		if(inputInfo.equals("yes")) {
-			//System.out.println("How many items of information would you like to type?");
-			//int numItems = Integer.parseInt(in.nextLine);
-			System.out.println("What movie would you like to input?");
-			String m = in.nextLine();
-			System.out.println("Who's the producer of this movie?");
-			String p = in.nextLine();
-			System.out.println("How long is the movie?");
-			String d = in.nextLine();
-			int dinteger = Integer.parseInt(d);
-			arrlist.add(new MovieClass(m,p,dinteger));
+		boolean running = true;
+		while(running) {
+			System.out.println("Would you like to input movie information? Type 'yes' or 'no' ");
+			String inputInfo = in.nextLine();
+			// ask user input to type number of movie info they'd like to input into the csv
+			if(inputInfo.equals("yes")) {
+				//System.out.println("How many items of information would you like to type?");
+				//int numItems = Integer.parseInt(in.nextLine);
+				System.out.println("What movie would you like to input?");
+				String m = in.nextLine();
+				System.out.println("Who's the producer of this movie?");
+				String p = in.nextLine();
+				System.out.println("How long is the movie?");
+				String d = in.nextLine();
+				int dinteger = Integer.parseInt(d);
+				arrlist.add(new MovieClass(m,p,dinteger));
+			}
+			else {
+				running = false;
+			}
 		}
 		/*
 		for(int i = 0; i < 10; i++) {
