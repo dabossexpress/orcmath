@@ -3,7 +3,7 @@ package AlexLeonPackage;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class CatalogueMaker {
+public class CatalogueMaker {//implement a save method and addObjects method
 	
 	private static ArrayList<MovieClass> arrlist;
 	private String movieTitle;
