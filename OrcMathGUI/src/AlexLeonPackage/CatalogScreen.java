@@ -41,7 +41,7 @@ public class CatalogScreen extends FullFunctionScreen implements FileRequester{
 		viewObjects.add(producer);
 		duration = new TextField(40,40,200,30,"Length goes here");
 		viewObjects.add(duration);
-		catalog = new MovieClass(title,producer,duration);
+		//catalog = new MovieClass(title,producer,duration);
 		
 		add = new Button(200,40,200,30,"add",Color.BLACK,new Action() {
 			public void act() {
@@ -73,7 +73,7 @@ public class CatalogScreen extends FullFunctionScreen implements FileRequester{
 	}
 	
 	public void addButton() {
-		MovieClass m = new MovieClass(title.getText(),producer.getText(),duration.getText());
+		MovieClass m = new MovieClass(title.getText(),producer.getText(),Integer.parseInt(duration.getText()));
 		text.setText("The movie is " + title);
 	}
 	
