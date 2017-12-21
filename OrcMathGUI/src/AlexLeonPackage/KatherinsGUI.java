@@ -8,9 +8,9 @@ import guiTeacher.components.StyledComponent;
 
 public class KatherinsGUI extends GUIApplication {
 
-	private static KatherinsGUI sample;
-	private static KatsCatalogScreen s;
-	private static KatsCatalogScreenInside inside;
+	public static KatherinsGUI sample;
+	public static KatsCatalogScreen s;
+	public static KatsCatalogScreenInside inside;
 	
 	public KatherinsGUI(int width, int height) {
 		super(width, height);
@@ -20,22 +20,22 @@ public class KatherinsGUI extends GUIApplication {
 
 	@Override
 	public void initScreen() {
-		// TODO Auto-generated method stu
 		try {
-			File fontFile = new File("resources/Baumans-Regular.ttf");
+			File fontFile = new File("resources//Risque-Regular.ttf");
 			Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);
 			Font baseFont=font.deriveFont(16f);
 			StyledComponent.setTabFont(baseFont);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		KatsCatalogScreen s = new KatsCatalogScreen(getWidth(),getHeight());
+		s = new KatsCatalogScreen(getWidth(),getHeight());
+		inside = new KatsCatalogScreenInside(getWidth(),getHeight());
 		setScreen(s);
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		KatherinsGUI sample = new KatherinsGUI(800,550);
+		sample = new KatherinsGUI(800,550);
 		Thread go = new Thread(sample);
 		go.start();
 	}

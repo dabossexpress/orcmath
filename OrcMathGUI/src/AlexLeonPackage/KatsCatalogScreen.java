@@ -24,7 +24,7 @@ public class KatsCatalogScreen extends FullFunctionScreen {
 	public void initAllObjects(List<Visible> viewObjects) {
 		try {
 			//			File fontFile = new File("resources//AdventPro-Medium.ttf");
-			File fontFile = new File("resources//Risque-Regular.ttf");
+			File fontFile = new File("resources\\Risque-Regular.ttf");
 			Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);
 			Font baseFont=font.deriveFont(16f);
 			StyledComponent.setTabFont(baseFont);
@@ -36,13 +36,13 @@ public class KatsCatalogScreen extends FullFunctionScreen {
 			@Override
 			public void act() {
 				// TODO Auto-generated method stub
-				
+				KatherinsGUI.sample.setScreen(KatherinsGUI.inside); 
 			}
 		}) {
 			
 		};
 		viewObjects.add(b);
-		stan = new Graphic(100,100,"resources/stanHat.jpg");
+		stan = new Graphic(100,100,.5,"resources/stanHat.jpg");
 		viewObjects.add(stan);
 	}
 
