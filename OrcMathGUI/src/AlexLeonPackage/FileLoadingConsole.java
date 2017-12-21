@@ -20,7 +20,8 @@ public class FileLoadingConsole {
  private static void testSaveContent(String fileName) {
 	 try{    
 		 FileWriter fw=new FileWriter(fileName);    
-		 fw.write("This file was created programmatically.");    
+		 //fw.write("This file was created programmatically.");    
+		 fw.write(CatalogueMaker.getCSVContent());
 		 fw.close();    
 		 System.out.println("Success! File \""+fileName+"\" saved!");
 	 }catch(IOException e){

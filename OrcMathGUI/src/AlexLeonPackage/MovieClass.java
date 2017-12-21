@@ -21,10 +21,6 @@ public class MovieClass extends AnimatedComponent{//Component
 		this.producer = producer;
 		this.duration = duration;
 	}
-
-	public static void main(String[] args) {
-	
-	}
 	
 	public void update(Graphics2D g) {
 		//g.setColor(Color.WHITE);

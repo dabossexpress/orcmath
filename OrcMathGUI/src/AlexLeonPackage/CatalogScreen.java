@@ -2,6 +2,7 @@ package AlexLeonPackage;
 
 import java.awt.Color;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JFrame;
@@ -22,7 +23,8 @@ public class CatalogScreen extends FullFunctionScreen implements FileRequester{
 	private Button save;
 	private Button delete;
 	private FileOpenButton open;
-	private MovieClass catalog;
+	//private MovieClass catalog;
+	private CatalogueMaker cm;
 	
 	private static final long serialVersionUID = 258186143576427947L;
 	
@@ -35,25 +37,26 @@ public class CatalogScreen extends FullFunctionScreen implements FileRequester{
 	public void initAllObjects(List<Visible> viewObjects) {
 		//descriptionField = new TextField(40,40,200,30,"Text goes here","movieTITLE");
 		//viewObjects.add(descriptionField);
-		title = new TextField(40,40,200,30,"Title goes here");
+		title = new TextField(40,100,200,30,"Title goes here");
 		viewObjects.add(title);
-		producer = new TextField(40,40,200,30,"Producer goes here");
+		producer = new TextField(40,160,200,30,"Producer goes here");
 		viewObjects.add(producer);
 		duration = new TextField(40,40,200,30,"Length goes here");
 		viewObjects.add(duration);
 		//catalog = new MovieClass(title,producer,duration);
+		cm = new CatalogueMaker();
 		
-		add = new Button(200,40,200,30,"add",Color.BLACK,new Action() {
+		add = new Button(240,160,200,30,"add",Color.PINK,new Action() {
 			public void act() {
 				addButton();
 			}
 		} );
-		save = new Button(200,40,200,30,"add",Color.BLACK,new Action() {
+		save = new Button(240,100,200,30,"save",Color.PINK,new Action() {
 			public void act() {
 				saveButton();
 			}
 		} );
-		delete = new Button(200,40,200,30,"add",Color.BLACK,new Action() {
+		delete = new Button(240,130,200,30,"delete",Color.PINK,new Action() {
 			public void act() {
 				deleteButton();
 			}
@@ -74,7 +77,8 @@ public class CatalogScreen extends FullFunctionScreen implements FileRequester{
 	
 	public void addButton() {
 		MovieClass m = new MovieClass(title.getText(),producer.getText(),Integer.parseInt(duration.getText()));
-		text.setText("The movie is " + title);
+		text.setText("The movie is ");
+		//cm.arrlist.add(m);
 	}
 	
 	public void saveButton() {
