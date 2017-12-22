@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 
 import guiTeacher.components.Graphic;
 import guiTeacher.components.MovingComponent;
-//hello
+//hell
 public class Hats extends MovingComponent {
 
 	private BufferedImage img;
