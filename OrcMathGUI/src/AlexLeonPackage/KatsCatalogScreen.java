@@ -38,9 +38,10 @@ public class KatsCatalogScreen extends FullFunctionScreen {
 				// TODO Auto-generated method stub
 				KatherinsGUI.sample.setScreen(KatherinsGUI.inside); 
 			}
-		}) {
-			
-		};
+		});
+		for(int i = 0; i < 28; i++){
+			viewObjects.add(new Hats(getWidth(), getHeight()));
+		}
 		viewObjects.add(b);
 		stan = new Graphic(100,100,.5,"resources/stanHat.jpg");
 		viewObjects.add(stan);
