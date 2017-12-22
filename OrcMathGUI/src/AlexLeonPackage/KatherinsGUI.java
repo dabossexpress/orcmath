@@ -1,5 +1,6 @@
 package AlexLeonPackage;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.io.File;
 
@@ -21,10 +22,12 @@ public class KatherinsGUI extends GUIApplication {
 	@Override
 	public void initScreen() {
 		try {
-			File fontFile = new File("resources//Risque-Regular.ttf");
+			File fontFile = new File("resources/Risque-Regular.ttf");
+			//			File fontFile = new File("resources//DayRoman.ttf");
 			Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);
-			Font baseFont=font.deriveFont(16f);
-			StyledComponent.setTabFont(baseFont);
+			Font baseFont=font.deriveFont(30f);
+			StyledComponent.setBaseFont(baseFont);
+			StyledComponent.setAccentColor(Color.white);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -35,7 +38,7 @@ public class KatherinsGUI extends GUIApplication {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		sample = new KatherinsGUI(800,550);
+		sample = new KatherinsGUI(800,450);
 		Thread go = new Thread(sample);
 		go.start();
 	}

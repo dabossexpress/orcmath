@@ -6,17 +6,17 @@ import java.awt.image.BufferedImage;
 import guiTeacher.components.Graphic;
 import guiTeacher.components.MovingComponent;
 //hell
-public class Hats extends MovingComponent {
+public class OrnamentGreen extends MovingComponent {
 
 	private BufferedImage img;
 	private int topToBottom;
 	private int leftToRight;
 	
-	public Hats(int w, int h) {
+	public OrnamentGreen(int w, int h) {
 		super((int)(Math.random()*w), (int)(Math.random()*h), 30, 30);
 		topToBottom = h;
 		leftToRight = w;
-		img = new Graphic(30,30,30,30,"resources/hat.png").getImage();
+		img = new Graphic(30,30,30,30,"resources/ornament green.jpg").getImage();
 		setVy(1.5+Math.random()*2.0);
 		update();
 		Thread t = new Thread(this);
