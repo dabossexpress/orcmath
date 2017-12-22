@@ -16,12 +16,15 @@ public class KatsCatalogScreen extends FullFunctionScreen {
 
 	private Button b;
 	private Graphic stan;
+	private Graphic tree;
 	
 	public KatsCatalogScreen(int width, int height) {
 		super(width, height);
 	}
 	
 	public void initAllObjects(List<Visible> viewObjects) {
+		tree = new Graphic(0,0,getWidth(),getHeight(),"resources/christmasTree.jpg");
+		viewObjects.add(tree);
 		try {
 			//			File fontFile = new File("resources//AdventPro-Medium.ttf");
 			File fontFile = new File("resources\\Risque-Regular.ttf");
@@ -43,8 +46,6 @@ public class KatsCatalogScreen extends FullFunctionScreen {
 			viewObjects.add(new Hats(getWidth(), getHeight()));
 		}
 		viewObjects.add(b);
-		stan = new Graphic(100,100,.5,"resources/stanHat.jpg");
-		viewObjects.add(stan);
 	}
 
 }
