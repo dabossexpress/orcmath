@@ -16,7 +16,7 @@ public class Hats extends MovingComponent {
 		super((int)(Math.random()*w), (int)(Math.random()*h), 30, 30);
 		topToBottom = h;
 		leftToRight = w;
-		img = new Graphic(0, 0,30,30,"resources/stanHat.jpg").getImage();
+		img = new Graphic(0, 0,30,30,"resources/hat.png").getImage();
 		setVy(1.5+Math.random()*2.0);
 		update();
 		Thread t = new Thread(this);
