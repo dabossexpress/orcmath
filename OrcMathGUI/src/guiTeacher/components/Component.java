@@ -198,10 +198,7 @@ public abstract class Component implements Visible {
 		this.alpha = alpha;
 	}
 
-	public void move(int newX, int newY, int durationMS){
-		Visible.move(this, newX, newY, durationMS);
-	}
-	
+
 	public void setDimensions(int width, int height) {
 		this.w = width;
 		this.h = height;

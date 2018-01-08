@@ -32,8 +32,6 @@ public abstract class MovingComponent extends Component implements Runnable{
 
 	public MovingComponent(int x, int y, int w, int h) {
 		super(x, y, w, h);
-		posx = x;
-		posy = y;
 		vx = 0;
 		vy = 0;
 	}
@@ -127,7 +125,7 @@ public abstract class MovingComponent extends Component implements Runnable{
 	/**
 	 * For demonstration purposes only. Make abstract
 	 */
-	public abstract void checkBehaviors();
+	public void checkBehaviors(){
 //		if(posy+vy > 300){
 //			posy = 300;
 //			vy=-vy;
@@ -146,5 +144,5 @@ public abstract class MovingComponent extends Component implements Runnable{
 //			vx=-vx;
 //		}
 //		
-//	}
+	}
 }

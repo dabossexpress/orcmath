@@ -1,8 +1,10 @@
 package myStuff;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import guiTeacher.components.Button;
+import guiTeacher.interfaces.Visible;
 import guiTeacher.userInterfaces.ClickableScreen;
 
 public class SimonScreenAlexander extends ClickableScreen implements Runnable {
@@ -11,6 +13,7 @@ public class SimonScreenAlexander extends ClickableScreen implements Runnable {
 	ArrayList<MoveInterfaceAlexander> mylist;
 	int roundNum;
 	boolean acceptInput;
+	
 	final Button b = getAButton();
 	b.setAction(new Action() {
 		public void act() {
@@ -21,7 +24,7 @@ public class SimonScreenAlexander extends ClickableScreen implements Runnable {
 			});
 			blink.start();
 		}
-	})
+	});
 	
 	public SimonScreenAlexander() {
 		// TODO Auto-generated constructor stub
@@ -32,12 +35,37 @@ public class SimonScreenAlexander extends ClickableScreen implements Runnable {
 
 	}
 	
-	public void run() {
-		start();
-		System.out.println(roundNum);
+	public void run(SimonScreenAlexander.this) {
+		//start();
+		//Thread.go();
+		long updateTime;
+		long timeAfterUpdate;
+		while(true){
+			updateTime = System.currentTimeMillis();
+			currentScreen.update();
+			repaint();
+			timeAfterUpdate = 30-(System.currentTimeMillis()-updateTime);
+			try {
+				if(timeAfterUpdate > 0)
+				Thread.sleep(timeAfterUpdate);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 	
 	public void start() {
+		void placeButton();
+		void selectButtonShape();
+		void selectColor();
+		void highlightButtonClicked();
+		void putPatternIntoArrList();
+		void isPlayerCorrect();
+	}
+
+	@Override
+	public void initAllObjects(List<Visible> viewObjects) {
+		// TODO Auto-generated method stub
 		
 	}
 }

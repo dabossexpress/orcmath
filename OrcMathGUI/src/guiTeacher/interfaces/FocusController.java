@@ -29,8 +29,6 @@ public interface FocusController {
 	public KeyedComponent getFocusedComponent();
 	public void moveScrollFocus(Scrollable sp);
 	public Scrollable getScrollComponent();
-	public int getWidth();
-	public int getHeight();
 
 	
 }

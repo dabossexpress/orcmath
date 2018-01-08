@@ -124,10 +124,4 @@ public class AnimatedComponent extends MovingComponent{
 		}
 	}
 
-	@Override
-	public void checkBehaviors() {
-		// TODO Auto-generated method stub
-		
-	}
-
 }

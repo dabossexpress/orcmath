@@ -6,4 +6,5 @@ public interface ButtonIntefaceAlexander extends Clickable {
 	void placeButton();
 	void selectButtonShape();
 	void selectColor();
+	void highlightButtonClicked();
 }
