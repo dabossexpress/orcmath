@@ -1,12 +1,14 @@
 package myStuff;
 
+import java.util.ArrayList;
+
 import guiTeacher.components.Button;
 import guiTeacher.userInterfaces.ClickableScreen;
 
 public class SimonScreenAlexander extends ClickableScreen implements Runnable {
 
 	ProgressInterfaceAlexander inter;
-	ArrayList<MoveInterfaceAlexander>;
+	ArrayList<MoveInterfaceAlexander> mylist;
 	int roundNum;
 	boolean acceptInput;
 	final Button b = getAButton();

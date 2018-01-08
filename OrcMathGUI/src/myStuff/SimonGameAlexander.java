@@ -4,15 +4,13 @@ import guiTeacher.GUIApplication;
 
 public class SimonGameAlexander extends GUIApplication{
 
-	SimonScreenAlexander s = new SimonScreenAlexander();
-	
 	public SimonGameAlexander(int width, int height) {
-		
+		super(width,height);
+		setVisibile(true);
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		SimonScreenAlexander s = new SimonScreenAlexander();
 	}
 	
 	public void initScreen() {
